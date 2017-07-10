@@ -73,33 +73,3 @@ def Run_scan(Host):
 		print str(x) + " : " + str(vaild_urls1[str(x)])
 Run_scan(Host)
 
-""" Junck
-fetched_urls = Extract_links(Check_html(Get_html(Host)))
-complete_urls = []
-vaild_urls = {}
-temp = []
-for x in fetched_urls:
-		for regex_line in html_triggers:
-			if regex_line in x:
-				url_filterd = x.replace(regex_line,"")
-				if url_filterd[:1] == '/':
-					temp.append(Host + url_filterd)
-				else:
-					temp.append(url_filterd)
-for x in temp:
-		x = x.replace('"','')
-		if(re.search('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', x) is not None):
-			complete_urls.append(x)
-		else:
-			if x[:1] == '/':
-				complete_urls.append(Host + x)
-			else:
-				complete_urls.append(Host + '/' + x)
-for x in complete_urls:
-		response = Check_response(x)
-		vaild_urls[x] = response
-for x in vaild_urls:
-	print str(x) + " : " + str(vaild_urls[str(x)])
-	if vaild_urls[x] == 200:
-		Run_scan(x)
-"""
