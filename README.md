@@ -1,4 +1,4 @@
 # Web-Spider
 Python Web Spider
 ```ssh
-$ python spider.py https://expamle.com
+$ python spider.py https://example.com
